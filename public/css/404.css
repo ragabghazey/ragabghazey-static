@@ -1,0 +1,40 @@
+        :root {
+            --ink: #1e293b;
+            --muted: #64748b;
+            --line: rgba(99, 102, 241, .16);
+            --primary: #4f46e5;
+            --bg: #ffffff;
+            --panel: #f8fafc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cairo', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            line-height: 1.9;
+        }
+        .box { max-width: 520px; text-align: center; }
+        .code {
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h1 { font-size: 1.5rem; margin: 10px 0 8px; }
+        p { color: var(--muted); margin-bottom: 26px; }
+        .links { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 11px 22px; border-radius: 30px; font-weight: 600;
+            font-size: .95rem; text-decoration: none;
+        }
+        .btn-primary { background: linear-gradient(135deg, var(--primary), #06b6d4); color: #fff; }
+        .btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--panel); }
+        .btn:hover { transform: translateY(-2px); }

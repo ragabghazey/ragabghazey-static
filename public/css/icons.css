@@ -1,0 +1,108 @@
+/* Font Awesome 6.5.1, cut down to the icons this site actually uses.
+ *
+ * The CDN build ships every icon in the library: 273KB of font files for the
+ * 59 glyphs here. These subsets are 9KB together and self-hosted, so the page
+ * also stops depending on a third party being reachable.
+ *
+ * Regenerate with scripts/build_icon_font.sh after adding an icon.
+ * Licence: CC BY 4.0 (icons) / SIL OFL 1.1 (fonts) — fontawesome.com/license
+ */
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/fa-solid-900-subset.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/fa-brands-400-subset.woff2') format('woff2');
+}
+
+.fa, .fas, .fa-solid, .fab, .fa-brands {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+
+.fa, .fas, .fa-solid { font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+.fab, .fa-brands { font-family: 'Font Awesome 6 Brands'; font-weight: 400; }
+
+.fa-spin { animation: fa-spin 2s linear infinite; }
+
+@keyframes fa-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fa-spin { animation-duration: 2s; animation-iteration-count: 1; }
+}
+
+.fa-arrow-right:before { content: "\f061"; }
+.fa-arrow-up-right-from-square:before { content: "\f08e"; }
+.fa-barcode:before { content: "\f02a"; }
+.fa-bolt:before { content: "\f0e7"; }
+.fa-book-open:before { content: "\f518"; }
+.fa-boxes-stacked:before { content: "\f468"; }
+.fa-briefcase:before { content: "\f0b1"; }
+.fa-broom:before { content: "\f51a"; }
+.fa-building:before { content: "\f1ad"; }
+.fa-building-user:before { content: "\e4da"; }
+.fa-calendar-alt:before { content: "\f073"; }
+.fa-capsules:before { content: "\f46b"; }
+.fa-check:before { content: "\f00c"; }
+.fa-chevron-down:before { content: "\f078"; }
+.fa-circle-question:before { content: "\f059"; }
+.fa-clock:before { content: "\f017"; }
+.fa-code:before { content: "\f121"; }
+.fa-cogs:before { content: "\f085"; }
+.fa-comments:before { content: "\f086"; }
+.fa-cube:before { content: "\f1b2"; }
+.fa-database:before { content: "\f1c0"; }
+.fa-docker:before { content: "\f395"; }
+.fa-download:before { content: "\f019"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-external-link-alt:before { content: "\f35d"; }
+.fa-file-alt:before { content: "\f15c"; }
+.fa-file-signature:before { content: "\f573"; }
+.fa-git-alt:before { content: "\f841"; }
+.fa-globe:before { content: "\f0ac"; }
+.fa-graduation-cap:before { content: "\f19d"; }
+.fa-heart-pulse:before { content: "\f21e"; }
+.fa-industry:before { content: "\f275"; }
+.fa-js:before { content: "\f3b8"; }
+.fa-laptop-code:before { content: "\f5fc"; }
+.fa-linux:before { content: "\f17c"; }
+.fa-magnifying-glass-chart:before { content: "\e522"; }
+.fa-map-location-dot:before { content: "\f5a0"; }
+.fa-motorcycle:before { content: "\f21c"; }
+.fa-paint-brush:before { content: "\f1fc"; }
+.fa-paper-plane:before { content: "\f1d8"; }
+.fa-print:before { content: "\f02f"; }
+.fa-project-diagram:before { content: "\f542"; }
+.fa-python:before { content: "\f3e2"; }
+.fa-react:before { content: "\f41b"; }
+.fa-robot:before { content: "\f544"; }
+.fa-rocket:before { content: "\f135"; }
+.fa-route:before { content: "\f4d7"; }
+.fa-server:before { content: "\f233"; }
+.fa-spider:before { content: "\f717"; }
+.fa-spinner:before { content: "\f110"; }
+.fa-star:before { content: "\f005"; }
+.fa-store:before { content: "\f54e"; }
+.fa-telegram:before { content: "\f2c6"; }
+.fa-truck-fast:before { content: "\f48b"; }
+.fa-university:before { content: "\f19c"; }
+.fa-user:before { content: "\f007"; }
+.fa-user-circle:before { content: "\f2bd"; }
+.fa-users:before { content: "\f0c0"; }
+.fa-whatsapp:before { content: "\f232"; }
