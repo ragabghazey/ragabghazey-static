@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 export default function CasePaymentsShippingPage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/page-base.css" />
       <div className="wrap">
         <a href="/#portfolio" className="back">→ العودة للأعمال</a>
 

@@ -26,8 +26,7 @@ const breadcrumb = {
 export default function CaseTallabakPage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/case-tallabak.css" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
       <div className="wrap">
         <a href="/#portfolio" className="back">→ العودة للأعمال</a>

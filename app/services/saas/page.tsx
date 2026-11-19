@@ -31,8 +31,7 @@ const serviceSchema = {
 export default function ServiceSaasPage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/page-base.css" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
 
       <div className="wrap">
         <a href="/#services" className="back">→ العودة للخدمات</a>

@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/privacy.css" />
       <div className="wrap">
         <a href="/" className="back">→ العودة للموقع</a>
 

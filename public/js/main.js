@@ -2,8 +2,7 @@
    Portfolio Website - JavaScript
    =================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all modules
+function initAll() {
     initNavbar();
     initSmoothScroll();
     initAnimatedCounters();
@@ -12,7 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initScrollAnimations();
     initWhatsAppFloat();
-});
+    initPrintButton();
+}
+
+// Run after the page (and React hydration) has fully loaded, so the DOM edits
+// made here do not clash with React re-rendering the page. A tick delay after
+// `load` lets React finish hydration first.
+if (document.readyState === 'complete') {
+    setTimeout(initAll, 0);
+} else {
+    window.addEventListener('load', () => setTimeout(initAll, 0));
+}
 
 /* ===================================
    Navbar Functions
@@ -21,6 +30,7 @@ function initNavbar() {
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
+    if (!navbar || !navToggle || !navLinks) return;
     const links = navLinks.querySelectorAll('a');
     
     // Scroll effect
@@ -472,4 +482,13 @@ function initWhatsAppFloat() {
 
     update();
     window.addEventListener('scroll', update, { passive: true });
+}
+
+/* ===================================
+   Print Button (CV page)
+   =================================== */
+function initPrintButton() {
+    const button = document.getElementById('printBtn');
+    if (!button) return;
+    button.addEventListener('click', () => window.print());
 }

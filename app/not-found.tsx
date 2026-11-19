@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <>
-      <link rel="stylesheet" href="/css/404.css" />
       <div className="box">
         <div className="code">404</div>
         <h1>الصفحة دي مش موجودة</h1>

@@ -553,7 +553,14 @@ class LanguageManager {
     }
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize after the page (and React hydration) has fully loaded, so the
+// DOM edits made here do not clash with React re-rendering the page. A tick
+// delay after `load` lets React finish hydration first.
+function initLanguageManager() {
     window.langManager = new LanguageManager();
-});
+}
+if (document.readyState === 'complete') {
+    setTimeout(initLanguageManager, 0);
+} else {
+    window.addEventListener('load', () => setTimeout(initLanguageManager, 0));
+}

@@ -51,8 +51,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="/css/icons.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/cv.css" />
+        <link rel="stylesheet" href="/css/page-base.css" />
+        <link rel="stylesheet" href="/css/case-tallabak.css" />
+        <link rel="stylesheet" href="/css/privacy.css" />
+        <link rel="stylesheet" href="/css/404.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <script src="/js/translations.js"></script>
+        <script src="/js/main.js"></script>
+      </body>
     </html>
   );
 }

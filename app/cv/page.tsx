@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { stats } from "@/lib/data";
-import PrintButton from "@/components/PrintButton";
 
 export const metadata: Metadata = {
   title: "السيرة الذاتية",
@@ -18,9 +17,7 @@ export const metadata: Metadata = {
 export default function CvPage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/cv.css" />
-
-      <button className="lang-switcher" id="langSwitcher" aria-label="Switch language">
+      <button className="cv-lang-switcher" id="langSwitcher" aria-label="Switch language">
         <i className="fas fa-globe"></i>
         <span>English</span>
       </button>
@@ -223,13 +220,13 @@ export default function CvPage() {
         <a className="btn btn-primary" href="/cv/ragab-ghazey-cv.pdf" download="ragab-ghazey-cv.pdf">
           <i className="fas fa-download"></i> <span data-translate="cv_btn_download">تحميل PDF</span>
         </a>
-        <PrintButton />
+        <button className="btn btn-secondary" id="printBtn" aria-label="طباعة">
+          <i className="fas fa-print"></i> <span data-translate="cv_btn_print">طباعة</span>
+        </button>
         <a href="/" className="btn btn-secondary">
           <i className="fas fa-arrow-right"></i> <span data-translate="cv_btn_back">العودة للموقع</span>
         </a>
       </div>
-
-      <script src="/js/translations.js"></script>
     </>
   );
 }

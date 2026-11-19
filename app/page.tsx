@@ -93,11 +93,7 @@ const jsonLd = {
 export default function HomePage() {
   return (
     <>
-      <link rel="stylesheet" href="/css/style.css" />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       <Nav />
       <Hero />
       <Services />
@@ -110,8 +106,6 @@ export default function HomePage() {
       <Contact />
       <Footer />
       <WhatsAppFloat />
-      <script src="/js/translations.js"></script>
-      <script src="/js/main.js"></script>
     </>
   );
 }
