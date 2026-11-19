@@ -443,31 +443,6 @@ function initScrollAnimations() {
 }
 
 /* ===================================
-   Typing Effect for Hero
-   =================================== */
-function initTypingEffect() {
-    const element = document.querySelector('.typing-text');
-    if (!element) return;
-    
-    const text = element.textContent;
-    element.textContent = '';
-    
-    let i = 0;
-    const type = () => {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, 100);
-        }
-    };
-    
-    type();
-}
-
-// Initialize typing effect after page load
-window.addEventListener('load', initTypingEffect);
-
-/* ===================================
    Floating WhatsApp
    =================================== */
 function initWhatsAppFloat() {
