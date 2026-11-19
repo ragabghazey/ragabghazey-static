@@ -64,6 +64,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -1505,13 +1506,19 @@ html {
     scroll-padding-top: 80px;
 }
 
-/* Honeypot — kept out of sight without display:none, which some bots skip */
+/* Honeypot — kept out of sight without display:none, which some bots skip.
+   Uses clip (not a large negative offset) so it never widens the page. */
 .hp-field {
     position: absolute;
-    left: -9999px;
     width: 1px;
     height: 1px;
+    padding: 0;
+    margin: -1px;
     overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }
 
 /* Project screenshots — real work gets a real picture instead of an icon */
